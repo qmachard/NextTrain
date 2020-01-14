@@ -1,0 +1,18 @@
+@import './variables';
+
+:root {
+  --color-default: #{$color-text};
+  --color-bg: #{$color-bg};
+  --color-bg-light: #{$color-bg-light};
+  --color-bg-lighter: #{$color-bg-lighter};
+
+  --font-light: #{$font-light};
+  --font-regular: #{$font-regular};
+  --font-bold: #{$font-bold};
+  --font-size-base: #{$font-size-base};
+}
+
+body {
+  background: var(--color-bg);
+  font-family: $font-family;
+}
