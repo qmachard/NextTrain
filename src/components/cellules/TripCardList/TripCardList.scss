@@ -1,0 +1,7 @@
+.trip-card-list {}
+
+.trip-card-list_item {
+  & + .trip-card-list_item {
+    margin-top: 25px;
+  }
+}

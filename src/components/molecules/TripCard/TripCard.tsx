@@ -12,10 +12,10 @@ export type TripCardProps = {
   stops: number,
   service: 'ter' | 'tgv',
   railway?: string,
-  retarded?: number,
+  delay?: number,
 };
 
-const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime, stops, railway, service, retarded}) => {
+const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime, stops, railway, service, delay}) => {
   const today = dayjs();
   const ETD = departureTime.diff(today, 'minute');
   const duration = arrivalTime.diff(departureTime, 'minute');
@@ -25,9 +25,9 @@ const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime, stops, r
       <div className="trip-card_inner">
         <Icon icon={service} title={service.toUpperCase()} className="trip-card_service" />
 
-        <Time departureTime={departureTime} arrivalTime={arrivalTime} warning={!!retarded} />
+        <Time departureTime={departureTime} arrivalTime={arrivalTime} warning={!!delay} />
 
-        <Info className="trip-card_etd" label="dans" big warning={!!retarded}>{ETD} mn</Info>
+        <Info className="trip-card_etd" label="dans" big warning={!!delay}>{ETD} mn</Info>
       </div>
 
       <ul className="trip-card_infos">
@@ -36,9 +36,9 @@ const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime, stops, r
             3456
           </Info>
         </li>
-        {retarded && (
+        {delay && (
           <li className="trip-card_info">
-            <Info label="retard" warning>{retarded} mn</Info>
+            <Info label="retard" warning>{delay} mn</Info>
           </li>
         )}
         <li className="trip-card_info">

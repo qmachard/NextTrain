@@ -41,6 +41,6 @@ stories.add("+ retarded", () => (
     departureTime={dayjs().add(2, "hour")}
     arrivalTime={dayjs().add(3, "hour")}
     stops={3}
-    retarded={15}
+    delay={15}
   />
 ));
