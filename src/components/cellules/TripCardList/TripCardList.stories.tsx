@@ -42,3 +42,9 @@ stories.add("default", () => (
     ]}
   />
 ));
+
+stories.add("no items", () => (
+  <TripCardList
+    items={[]}
+  />
+));

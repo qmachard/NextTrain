@@ -12,9 +12,13 @@ const TripCardList: React.FC<TripCardListProps> = ({items}) => {
   return (
     <ul className="trip-card-list">
       {
-        items.map(item => (
-          <li className="trip-card-list_item"><TripCard {...item} /></li>
-        ))
+        items.length > 0 ? (
+          items.map(item => (
+            <li className="trip-card-list_item"><TripCard {...item} /></li>
+          ))
+        ) : (
+          <p className="trip-card-list_no-result">Aucun trajets.</p>
+        )
       }
     </ul>
   );
