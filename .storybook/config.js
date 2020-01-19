@@ -16,7 +16,7 @@ addDecorator(jsxDecorator);
 // Option defaults.
 addParameters({
   options: {
-    name: 'ReHear Storybook',
+    name: 'NextTrain Storybook',
   },
 });
 
