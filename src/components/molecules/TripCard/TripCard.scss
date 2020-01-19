@@ -1,0 +1,35 @@
+.trip-card {
+  display: block;
+  position: relative;
+  background: #272727;
+  border-radius: 6px;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+.trip-card_inner {
+  display: flex;
+  align-items: center;
+  padding: 16px 17px;
+}
+
+.trip-card_time {
+  font-size: 24px;
+  font-weight: 300;
+  color: #E5E5E5;
+
+  strong {
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.trip-card_eta {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 300;
+
+  strong {
+    font-weight: 700;
+  }
+}
