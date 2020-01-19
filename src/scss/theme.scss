@@ -2,6 +2,9 @@
 
 :root {
   --color-default: #{$color-text};
+  --color-primary: #{$color-primary};
+  --color-smooth: #{$color-smooth};
+  --color-warning: #{$color-warning};
   --color-bg: #{$color-bg};
   --color-bg-light: #{$color-bg-light};
   --color-bg-lighter: #{$color-bg-lighter};
@@ -14,5 +17,6 @@
 
 body {
   background: var(--color-bg);
+  color: var(--color-default);
   font-family: $font-family;
 }

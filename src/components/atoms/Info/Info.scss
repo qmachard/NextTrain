@@ -1,0 +1,36 @@
+.info {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--color-default);
+
+  &--warning {
+    color: var(--color-warning);
+  }
+}
+
+.info_icon {
+  margin-right: 5px;
+
+  &.icon-tgv {
+    height: 12px;
+    width: 43px;
+  }
+
+  &.icon-ter {
+    height: 13px;
+    width: 30px;
+  }
+}
+
+.info_label {
+  font-weight: var(--font-light);
+  margin-right: 5px;
+}
+
+.info_value {
+  font-weight: var(--font-bold);
+
+  .info--big & {
+    font-size: 24px;
+  }
+}

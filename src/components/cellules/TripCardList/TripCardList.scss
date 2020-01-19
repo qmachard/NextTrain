@@ -1,0 +1,13 @@
+.trip-card-list {}
+
+.trip-card-list_item {
+  & + .trip-card-list_item {
+    margin-top: 25px;
+  }
+}
+
+.trip-card-list_no-result {
+  text-align: center;
+  color: var(--color-smooth);
+  font-weight: var(--font-light);
+}

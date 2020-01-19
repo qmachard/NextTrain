@@ -1,0 +1,23 @@
+.time {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--color-default);
+
+  &--warning {
+    color: var(--color-warning);
+  }
+}
+
+.time_departure {
+  font-weight: var(--font-bold);
+}
+
+.time_arrow {
+  display: block;
+  width: 14px;
+  height: 10px;
+  color: var(--color-smooth);
+  margin: 0 7px;
+}
