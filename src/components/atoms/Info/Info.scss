@@ -1,0 +1,18 @@
+.info {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--color-default);
+}
+
+.info_label {
+  font-weight: var(--font-light);
+  margin-right: 5px;
+}
+
+.info_value {
+  font-weight: var(--font-bold);
+
+  .info--big & {
+    font-size: 18px;
+  }
+}
