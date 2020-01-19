@@ -1,0 +1,34 @@
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #353535;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.example .icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  color: #FFFFFF;
+}
+
+.example_view {
+  display: block;
+  padding: 10px;
+}
+
+.example_label {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  background-color: #353535;
+  color: #FFFFFF;
+  width: 100%;
+}
