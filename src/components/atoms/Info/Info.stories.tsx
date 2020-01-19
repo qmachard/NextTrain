@@ -12,8 +12,21 @@ stories.add("default", () => (
   </Info>
 ));
 
+
+stories.add("with icon", () => (
+  <Info icon="ter" label="ter">
+    3456
+  </Info>
+));
+
 stories.add("+ big", () => (
   <Info label="durée" big>
+    32 mn
+  </Info>
+));
+
+stories.add("+ warning", () => (
+  <Info label="durée" warning>
     32 mn
   </Info>
 ));

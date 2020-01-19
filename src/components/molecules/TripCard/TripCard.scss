@@ -1,8 +1,9 @@
 .trip-card {
   display: block;
   position: relative;
-  background: #272727;
+  background: var(--color-bg-light);
   border-radius: 6px;
+  overflow: hidden;
   color: white;
   font-family: Roboto, sans-serif;
 }
@@ -13,23 +14,29 @@
   padding: 16px 17px;
 }
 
-.trip-card_time {
-  font-size: 24px;
-  font-weight: 300;
-  color: #E5E5E5;
+.trip-card_infos {
+  display: flex;
+  align-items: baseline;
+  background: var(--color-bg-lighter);
+  padding: 10px 17px;
+}
 
-  strong {
-    font-weight: 700;
-    color: white;
+.trip-card_info {
+  & + .trip-card_info:not(.trip-card_info--right) {
+    margin-left: 20px;
+  }
+
+  &--right {
+    margin-left: auto;
   }
 }
 
-.trip-card_eta {
-  margin-left: auto;
-  font-size: 18px;
-  font-weight: 300;
+.trip-card_service {
+  width: 50px;
+  height: 24px;
+  margin-right: 20px;
+}
 
-  strong {
-    font-weight: 700;
-  }
+.trip-card_etd {
+  margin-left: auto;
 }

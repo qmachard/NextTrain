@@ -2,30 +2,66 @@ import React from 'react';
 import dayjs, {Dayjs} from 'dayjs';
 
 import './TripCard.scss';
+import {Time} from "../../atoms/Time";
+import {Info} from "../../atoms/Info";
+import {Icon} from "../../atoms/Icon";
 
 export type TripCardProps = {
   departureTime: Dayjs,
   arrivalTime: Dayjs,
   stops: number,
+  service: 'ter' | 'tgv',
   railway?: string,
-  retarded?: boolean,
+  retarded?: number,
 };
 
-export const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime}) => {
+const TripCard: React.FC<TripCardProps> = ({departureTime, arrivalTime, stops, railway, service, retarded}) => {
   const today = dayjs();
   const ETD = departureTime.diff(today, 'minute');
-  console.log(ETD);
+  const duration = arrivalTime.diff(departureTime, 'minute');
 
   return (
     <article className="trip-card">
       <div className="trip-card_inner">
-        <div className="trip-card_times">
-          <span className="trip-card_time"><strong>{dayjs(departureTime).format('HH:mm')}</strong></span>
-          <span className="trip-card_time">{dayjs(arrivalTime).format('HH:mm')}</span>
-        </div>
+        <Icon icon={service} title={service.toUpperCase()} className="trip-card_service" />
 
-        <div className="trip-card_eta">dans <strong>{ETD} mn</strong></div>
+        <Time departureTime={departureTime} arrivalTime={arrivalTime} warning={!!retarded} />
+
+        <Info className="trip-card_etd" label="dans" big warning={!!retarded}>{ETD} mn</Info>
       </div>
+
+      <ul className="trip-card_infos">
+        <li className="trip-card_info">
+          <Info label={service.toUpperCase()}>
+            3456
+          </Info>
+        </li>
+        {retarded && (
+          <li className="trip-card_info">
+            <Info label="retard" warning>{retarded} mn</Info>
+          </li>
+        )}
+        <li className="trip-card_info">
+          <Info label="destination">
+            St-Malo
+          </Info>
+        </li>
+        <li className="trip-card_info">
+          <Info label="durée">{duration} mn</Info>
+        </li>
+        <li className="trip-card_info">
+          <Info label="arrêts">{stops}</Info>
+        </li>
+        {railway && (
+          <li className="trip-card_info trip-card_info--right">
+            <Info label="voie">{railway}</Info>
+          </li>
+        )}
+      </ul>
     </article>
   );
 };
+
+TripCard.defaultProps = {};
+
+export { TripCard };
