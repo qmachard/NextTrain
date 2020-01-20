@@ -1,0 +1,26 @@
+.top-bar-button {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  transition: background .2s;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &--right {
+    left: auto;
+    right: 0;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, .2);
+  }
+
+  .icon {
+    width: 20px;
+    height: 15px;
+  }
+}
