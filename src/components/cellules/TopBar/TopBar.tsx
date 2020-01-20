@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './TopBar.scss';
+
 import {TopBarButton, TopBarButtonProps} from "./TopBarButton";
 import {TopBarBrand, TopBarBrandProps} from "./TopBarBrand";
 

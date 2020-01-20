@@ -3,10 +3,10 @@ import {action} from "@storybook/addon-actions";
 
 import {storiesOf} from "@storybook/react";
 
-import {TopBar} from "./TopBar";
-import {Icon} from "../../atoms/Icon";
+import {Icon} from "components/atoms/Icon";
+import {TopBar} from "components/cellules/TopBar";
 
-const stories = storiesOf("Cellules|TopBar", module);
+const stories = storiesOf("Cellules/TopBar", module);
 
 stories.add("default", () => (
   <TopBar>
@@ -18,7 +18,7 @@ stories.add("default", () => (
 
 stories.add("with title", () => (
   <TopBar>
-    <TopBar.Brand>Choix des <b>villes</b></TopBar.Brand>
+    <TopBar.Brand>Choix des <b>Villes</b></TopBar.Brand>
     <TopBar.Button position="right"><Icon title="Modifier" icon="save"/></TopBar.Button>
   </TopBar>
 ));
