@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 
 import { storiesOf } from "@storybook/react";
 
-import { TripCardList } from "./TripCardList";
+import { TripCardList } from "components/cellules/TripCardList";
 import { TripCardProps} from "components/molecules/TripCard";
 
 const stories = storiesOf("Cellules/TripCardList", module);
