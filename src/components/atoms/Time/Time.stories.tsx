@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react";
 
 import { Time } from "./Time";
 
-const stories = storiesOf("Atoms|Time", module);
+const stories = storiesOf("Atoms/Time", module);
 
 stories.add("default", () => (
   <Time

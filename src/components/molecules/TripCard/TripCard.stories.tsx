@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react";
 
 import { TripCard } from "./TripCard";
 
-const stories = storiesOf("Molecules|TripCard", module);
+const stories = storiesOf("Molecules/TripCard", module);
 
 stories.add("ter", () => (
   <TripCard

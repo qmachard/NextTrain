@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 
 import { Info } from "./Info";
 
-const stories = storiesOf("Atoms|Info", module);
+const stories = storiesOf("Atoms/Info", module);
 
 stories.add("default", () => (
   <Info label="durée">
