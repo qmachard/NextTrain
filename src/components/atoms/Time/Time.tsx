@@ -3,7 +3,7 @@ import dayjs, { Dayjs } from "dayjs";
 import classNames from "classnames";
 
 import './Time.scss';
-import {Icon} from "../Icon";
+import {Icon} from "components/atoms/Icon";
 
 export type TimeProps = {
   departureTime: Dayjs,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import icons from '../../../assets/icons.svg';
+import icons from 'assets/icons.svg';
 import { Icon } from './Icon';
 
 const stories = storiesOf('Atoms|Icon', module);
