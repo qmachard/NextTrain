@@ -2,7 +2,7 @@ import { configure, addParameters, addDecorator } from '@storybook/react';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
 import './style.scss';
-import '../src/index.scss';
+import 'index.scss';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /\.stories\.tsx?$/);
@@ -16,7 +16,10 @@ addDecorator(jsxDecorator);
 // Option defaults.
 addParameters({
   options: {
-    name: 'NextTrain Storybook',
+    theme: {
+      brandTitle: 'NextTrain Storybook'
+    },
+    showRoots: true,
   },
 });
 

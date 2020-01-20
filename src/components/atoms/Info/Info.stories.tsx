@@ -2,9 +2,9 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
-import { Info } from "./Info";
+import { Info } from "components/atoms/Info";
 
-const stories = storiesOf("Atoms|Info", module);
+const stories = storiesOf("Atoms/Info", module);
 
 stories.add("default", () => (
   <Info label="durée">

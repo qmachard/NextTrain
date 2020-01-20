@@ -3,9 +3,9 @@ import dayjs from "dayjs";
 
 import { storiesOf } from "@storybook/react";
 
-import { TripCard } from "./TripCard";
+import { TripCard } from "components/molecules/TripCard";
 
-const stories = storiesOf("Molecules|TripCard", module);
+const stories = storiesOf("Molecules/TripCard", module);
 
 stories.add("ter", () => (
   <TripCard

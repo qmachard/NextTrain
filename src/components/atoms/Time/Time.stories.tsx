@@ -3,9 +3,9 @@ import dayjs from "dayjs";
 
 import { storiesOf } from "@storybook/react";
 
-import { Time } from "./Time";
+import { Time } from "components/atoms/Time";
 
-const stories = storiesOf("Atoms|Time", module);
+const stories = storiesOf("Atoms/Time", module);
 
 stories.add("default", () => (
   <Time

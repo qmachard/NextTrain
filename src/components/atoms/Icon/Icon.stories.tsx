@@ -2,10 +2,10 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import icons from '../../../assets/icons.svg';
-import { Icon } from './Icon';
+import icons from 'assets/icons.svg';
+import { Icon } from 'components/atoms/Icon';
 
-const stories = storiesOf('Atoms|Icon', module);
+const stories = storiesOf('Atoms/Icon', module);
 
 stories.add('default', () => <Icon icon="bell" title="Icone Étoile" />);
 

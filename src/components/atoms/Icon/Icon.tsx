@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import icons from '../../../assets/icons.svg';
+import icons from 'assets/icons.svg';
 import './Icon.scss';
 
 export type IconProps = {

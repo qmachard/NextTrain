@@ -2,9 +2,9 @@ import React from 'react';
 import dayjs, {Dayjs} from 'dayjs';
 
 import './TripCard.scss';
-import {Time} from "../../atoms/Time";
-import {Info} from "../../atoms/Info";
-import {Icon} from "../../atoms/Icon";
+import {Time} from "components/atoms/Time";
+import {Info} from "components/atoms/Info";
+import {Icon} from "components/atoms/Icon";
 
 export type TripCardProps = {
   departureTime: Dayjs,

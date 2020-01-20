@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import './Info.scss';
 
-import {Icon} from "../Icon";
+import {Icon} from "components/atoms/Icon";
 
 export type InfoProps = {
   label: string,
